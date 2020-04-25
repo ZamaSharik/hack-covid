@@ -59,3 +59,15 @@ body {
 .icon:hover {
   color: #ff4c68;
 }
+
+#card-id {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: 40px;
+}
+
+.card {
+  margin-bottom: 16px;
+  margin-left: 20px;
+}
