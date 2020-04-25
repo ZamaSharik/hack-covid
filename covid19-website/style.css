@@ -59,3 +59,21 @@ body {
 .icon:hover {
   color: #ff4c68;
 }
+
+#form {
+  text-align: left;
+  padding: 7% 15% 1% 15%;
+}
+
+.feature-box {
+  padding: 5%;
+}
+
+.icon {
+  color: #ef8172 !important;
+  margin-bottom: 1rem;
+}
+
+.icon:hover {
+  color: #ff4c68;
+}
