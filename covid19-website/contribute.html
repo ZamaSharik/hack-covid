@@ -15,7 +15,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
-    <script src="customerData.js"></script>
     <!-- google font link -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,900,700|Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -28,6 +27,7 @@
         <div class="container-fluid">
             <!-- NavBar -->
             <nav class="navbar navbar-expand-lg navbar-dark">
+                <img src="logo_transparent.png" width="13%" height="13%"alt="img">
                 <a class="navbar-brand" href="index.html">Bridge the Gap</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
                     aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,27 +38,182 @@
                     <ul class="navbar-nav ml-auto">
 
                         <li class="nav-item">
-                            <a class="nav-link" href="non-profit.html">Non-profits</a>
+                            <a class="nav-link" href="forms.html">Non-profits</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Contribute</a>
+                            <a class="nav-link" href="contribute.html">Contribute</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">About</a>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#Aboutus">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="">Contact us</a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </nav>
         </div>
     </section>
     <br>
-    <center>
-    <div id="card-id">
-
+    <div id="tip">
+        <center>
+            <h2>Contribute as an... </h2>
+        </center>
     </div>
-</center>
+    <center>
+        <table>
+            <tr>
+                <tc>
+                    <div class="popup" onclick="myFunction()">Individual
+                        <span class="popuptext" id="myPopup">See below!</span>
+                    </div>
+                </tc>
+                <script>
+                    // When the user clicks on <div>, open the popup
+                    function myFunction() {
+                        var popup = document.getElementById("myPopup");
+                        popup.classList.toggle("show");
+                    }
+                </script>
+                <tc>
+                    <button
+                        onclick="location.href='mailto:?&subject=Help%20a%20nonprofit&body=Hi! I am signed up with Bridge the Gap and donating to [insert Non-Profit Name] and was wondering if you would be willing to help me. I am donating [insert material] and am planning on dropping the supplies off on [date, time, location]. Look forward to hearing back from you!'"
+                        class="button1" type="button">
+                        Company</button>
+                </tc>
+                <tc>
+                    <button
+                        onclick="location.href='sms:+&body=Hey! I have signed up with Bridge the Gap and am donating to [insert Non-Profit Name]. I would love to work with you and wanted to know if you want to collaborate and help me reach the goal. Text me at [number] and I would love to discuss the details with you! Thanks!'"
+                        class="button1" type="button">
+                        Friends & family</button>
+                </tc>
+            </tr>
+        </table>
+    </center>
+
+    <br>
+
+
+
+
+
+    <center>
+        <strong><p>Non-profit categories:</p></strong>
+
+        <button onclick="filterArray('health')"class="btnnn btn-danger">
+            COVID-19
+        </button>
+        <button onclick="filterArray('health2')"class="btnn btn-primary">Health</button>
+        <button onclick="filterArray('health3')"class="btnn btn-primary">Animals</button>
+        <button onclick="filterArray('health4')"class="btnn btn-primary">Education</button>
+
+        <div id="app">
+            <br>
+
+        </div>
+        <div id="card-id">
+        </div>
+        <div id="paypal">
+        <p>Don't have any tangible items to donate?</p> 
+        <b><p>Donate here:</p></b>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick" />
+            <input type="hidden" name="hosted_button_id" value="UYU68NG2J8SD8" />
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0"
+                name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+            <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="10" height="10" />
+        </form>
+    </div>
+    </center>
+    <style>
+        /* Set the size of the div element that contains the map */
+        #map {
+            height: 400px;
+            /* The height is 400 pixels */
+            width: 80%;
+            /* The width is the width of the web page */
+            /* margin-top: 40px;
+            margin-bottom: 40px; */
+            margin: 40px;
+        }
+    </style>
+    </head>
+
+    <body>
+        <!--The div element for the map -->
+        <center><div id="map"></div></center>
+        <script>
+            // Initialize and add the map
+            function initMap() {
+                // The location of Uluru
+
+                // The location of Uluru
+                var emerald = {
+                    lat: 47.584000,
+                    lng: -122.331698
+                };
+                var animal = {
+                    lat: 47.581363,
+                    lng: -122.163449
+                };
+                var sound = {
+                    lat: 47.613878,
+                    lng: -122.344436
+                };
+                var kaiser = {
+                    lat: 47.669882,
+                    lng: -122.375654
+                };
+                var food = {
+                    lat: 47.566819,
+                    lng: -122.289683
+                };
+                var schools = {
+                    lat: 47.600366,
+                    lng: -122.324672
+                };
+                // The map, centered at Uluru
+                var map = new google.maps.Map(
+                    document.getElementById('map'), {
+                        zoom: 10,
+                        center: schools
+                    });
+
+                var marker = new google.maps.Marker({
+                    position: emerald,
+                    map: map
+                });
+                var marker = new google.maps.Marker({
+                    position: animal,
+                    map: map
+                });
+                var marker = new google.maps.Marker({
+                    position: sound,
+                    map: map
+                });
+                var marker = new google.maps.Marker({
+                    position: kaiser,
+                    map: map
+                });
+                var marker = new google.maps.Marker({
+                    position: food,
+                    map: map
+                });
+                var marker = new google.maps.Marker({
+                    position: schools,
+                    map: map
+                });
+
+            }
+        </script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBC7zBoLTQAO7FISPd01sJue6O68p4YAJ0&callback=initMap">
+        </script>
+    </body>
+
+</html>
+<script src="data.js"></script>
+
 </body>
+
 </html>
